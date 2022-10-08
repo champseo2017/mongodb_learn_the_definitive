@@ -1,9 +1,11 @@
 /* 
-Dynamic Schemas
-  - Grouping documents of the same kind together in the same collection allows for data locality.
+  
+  Subcollections
 
-  - We begin to impose some structure on our documents when we create indexes. (This is especially true in the case of unique indexes.) These indexes are defined per collection. By putting only documents of a single type into the same collection, we can index our collections more efficiently.
+    - GridFS, a protocol for storing large files uses subcollections to store file metadata separately from content chunks
 
-  As you can see, there are sound reasons for creating a schema and for grouping related types of documents together, even though MongoDB does not enforce it.
+    - db.blog will give you the blog col‐ lection, and db.blog.posts will give you the blog.posts collection.
+
+    - Subcollections are a great way to organize data in MongoDB, and their use is highly recommended. (คอลเล็กชันย่อยเป็นวิธีที่ยอดเยี่ยมในการจัดระเบียบข้อมูลใน MongoDB และขอแนะนำให้ใช้งาน)
 
 */
